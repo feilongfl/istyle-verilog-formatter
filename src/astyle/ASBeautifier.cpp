@@ -77,13 +77,19 @@ void ASBeautifier::initStatic()
     headers.push_back(&AS_WHILE);
     headers.push_back(&AS_INITIAL);
     headers.push_back(&AS_FOREVER);
-    headers.push_back(&AS_ALWAYS);
+	headers.push_back(&AS_ALWAYS);
+	headers.push_back(&AS_ALWAYS_FF);
+	headers.push_back(&AS_ALWAYS_COMB);
+	headers.push_back(&AS_ALWAYS_LATCH);
     headers.push_back(&AS_REPEAT);
 
     nonParenHeaders.push_back(&AS_ELSE);
     nonParenHeaders.push_back(&AS_INITIAL);
     nonParenHeaders.push_back(&AS_FOREVER);
-    nonParenHeaders.push_back(&AS_ALWAYS);
+	nonParenHeaders.push_back(&AS_ALWAYS);
+	nonParenHeaders.push_back(&AS_ALWAYS_FF);
+	nonParenHeaders.push_back(&AS_ALWAYS_COMB);
+	nonParenHeaders.push_back(&AS_ALWAYS_LATCH);
     nonParenHeaders.push_back(&AS_REPEAT);
 
     verilogBlockBegin.push_back(&AS_CASE      );

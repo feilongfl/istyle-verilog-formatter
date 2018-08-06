@@ -70,18 +70,30 @@ bool ASStreamIterator::hasMoreLines() const
 string ASStreamIterator::nextLine()
 {
     string buffer;
-    getline(*inStream, buffer);
-    if (inStream->fail() && !inStream->eof())
-    {
-        string str;
-        str = "Could not read line " ;
-        error(str.c_str(), "(too long?)");
-    }
-    if (buffer[buffer.size() - 1] == '\r')
-    {
-        buffer.erase(buffer.size() - 1);
-    }
-    ++linecount;
+	string str;
+
+	/*try
+	{*/
+		getline(*inStream, buffer);
+		if (inStream->fail() && !inStream->eof())
+		{
+			str = "Could not read line ";
+			error(str.c_str(), "(too long?)");
+		}
+		if (buffer.size() > 0) {
+			if (buffer[buffer.size() - 1] == '\r')
+			{
+				buffer.erase(buffer.size() - 1);
+			}
+		}
+		++linecount;
+	/*}
+	catch 
+	{
+		str = "err in read file.";
+		error(str.c_str);
+	}*/
+    
     return buffer;
 }
 

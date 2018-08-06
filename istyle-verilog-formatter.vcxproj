@@ -72,6 +72,10 @@
     <IncludePath>D:\prj\istyle-verilog-formatter\src\astyle;D:\prj\istyle-verilog-formatter\src;$(IncludePath)</IncludePath>
     <TargetName>iStyle</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(MSBuildProjectDirectory)\src\astyle;$(MSBuildProjectDirectory)\src;$(IncludePath)</IncludePath>
+    <SourcePath>$(MSBuildProjectDirectory)\src\astyle;$(MSBuildProjectDirectory)\src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>

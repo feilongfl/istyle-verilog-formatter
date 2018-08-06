@@ -127,7 +127,10 @@ const string ASResource::AS_INITIAL      = string("initial");
 
 const string ASResource::AS_FOREVER      = string("forever");
 
-const string ASResource::AS_ALWAYS       = string("always");
+const string ASResource::AS_ALWAYS = string("always");
+const string ASResource::AS_ALWAYS_FF = string("always_ff");
+const string ASResource::AS_ALWAYS_LATCH = string("always_latch");
+const string ASResource::AS_ALWAYS_COMB = string("always_comb");
 const string ASResource::AS_REPEAT       = string("repeat");
 
 const string ASResource::AS_CASE         = string("case"     );
